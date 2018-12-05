@@ -1,39 +1,40 @@
 {
-  "name": "react-js-spatial-navigation",
-  "version": "0.0.5",
-  "description": "A wrapper of js-spatial-navigation to react components",
-  "main": "build/index.js",
-  "bugs": {
-    "url": "https://github.com/dead/react-js-spatial-navigation/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dead/react-js-spatial-navigation.git"
-  },
-  "peerDependencies": {
-    "react": "^15.5.4"
-  },
-  "dependencies": {
-    "react": "^15.5.4",
-    "webpack": "^2.6.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack --config webpack.config.js"
-  },
-  "author": {
-    "name": "Gustavo Bennemann de Moura",
-    "email": "gustavobenn@gmail.com",
-    "url": "https://github.com/dead"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-stage-0": "^6.0.15",
-    "babel-preset-env": "^1.5.1"
-  }
+	"name": "react-js-spatial-navigation",
+	"version": "0.0.5",
+	"description": "A wrapper of js-spatial-navigation to react components",
+	"main": "build/index.js",
+	"bugs": {
+		"url": "https://github.com/dead/react-js-spatial-navigation/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dead/react-js-spatial-navigation.git"
+	},
+	"peerDependencies": {
+		"react": "^15.5.4"
+	},
+	"dependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.2.1",
+		"react": "^16.6.3",
+		"webpack": "^4.20.2"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "webpack --watch",
+		"build": "webpack --config webpack.config.js"
+	},
+	"author": {
+		"name": "Gustavo Bennemann de Moura",
+		"email": "gustavobenn@gmail.com",
+		"url": "https://github.com/dead"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.1.5",
+		"@babel/core": "^7.1.6",
+		"@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+		"@babel/plugin-transform-react-jsx": "^7.2.0",
+		"@babel/preset-env": "^7.2.0",
+		"babel-loader": "^8.0.4",
+		"webpack-cli": "^3.1.2"
+	}
 }
