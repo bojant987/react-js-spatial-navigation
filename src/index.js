@@ -143,6 +143,8 @@ class Focusable extends Component {
         this.state = {
             el: null,
         };
+
+        this.getRef = this.getRef.bind(this);
     }
 
   componentFocused(e) {
