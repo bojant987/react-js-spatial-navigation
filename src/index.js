@@ -199,7 +199,7 @@ class Focusable extends Component {
     }
 
     return (
-      <Fragment className={classNames.join(" ")}>
+      <Fragment>
         {this.props.children(this.getRef)}
       </Fragment>
     );
