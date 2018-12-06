@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import JsSpatialNavigation from './lib/spatial_navigation.js';
@@ -137,6 +137,14 @@ function getSelector(id) {
 *     A function that will be fired when the component is focused and enter key is pressed.
 */
 class Focusable extends Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            el: null,
+        };
+    }
+
   componentFocused(e) {
     if (this.props.onFocus) {
       this.props.onFocus(e);
@@ -150,28 +158,33 @@ class Focusable extends Component {
   }
 
   componentClickEnter(e) {
-    if (this.props.onClickEnter) {
-      this.props.onClickEnter(e);
+    if (this.enterHandler) {
+        this.enterHandler(e);
     }
   }
+
+    getRef(enterHandler, el) {
+        this.enterHandler = enterHandler;
+        this.setState({ el });
+    }
 
   _componentFocused = (event) => this.componentFocused(event);
   _componentUnfocused = (event) => this.componentUnfocused(event);
   _componentClickEnter = (event) => this.componentClickEnter(event);
 
   componentDidMount() {
-    if (!this.el)
+    if (!this.state.el)
       return;
 
-    this.el.addEventListener("sn:focused", this._componentFocused);
-    this.el.addEventListener("sn:unfocused", this._componentUnfocused);
-    this.el.addEventListener("sn:enter-up", this._componentClickEnter);
+    this.state.el.addEventListener("sn:focused", this._componentFocused);
+    this.state.el.addEventListener("sn:unfocused", this._componentUnfocused);
+    this.state.el.addEvestate.ntListener("sn:enter-up", this._componentClickEnter);
   }
 
   componentWillUnmount() {
-    this.el.removeEventListener("sn:focused", this._componentFocused);
-    this.el.removeEventListener("sn:unfocused", this._componentUnfocused);
-    this.el.removeEventListener("sn:enter-up", this._componentClickEnter);
+    this.state.el.removeEventListener("sn:focused", this._componentFocused);
+    this.state.el.removeEventListener("sn:unfocused", this._componentUnfocused);
+    this.state.el.removeEventListener("sn:enter-up", this._componentClickEnter);
   }
 
   render() {
@@ -186,9 +199,9 @@ class Focusable extends Component {
     }
 
     return (
-      <div className={classNames.join(" ")} ref={e => this.el = e} tabIndex="-1">
-        {this.props.children}
-      </div>
+      <Fragment className={classNames.join(" ")}>
+        {this.props.children(this.getRef)}
+      </Fragment>
     );
   }
 }
