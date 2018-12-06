@@ -90,7 +90,10 @@ class SpatialNavigation extends Component {
       propsConfig.tabIndexIgnoreList = this.props.tabIndexIgnoreList;
     }
 
-    return propsConfig;
+    return {
+        ...propsConfig,
+        ...this.props.config,
+    };
   }
 
   componentWillMount() {
@@ -167,21 +170,22 @@ class Focusable extends Component {
 
     getRef(enterHandler, el) {
         this.enterHandler = enterHandler;
-        this.setState({ el });
+
+        if (el) {
+            el.addEventListener("sn:focused", this._componentFocused);
+            el.addEventListener("sn:unfocused", this._componentUnfocused);
+            el.addEventListener("sn:enter-down", this._componentClickEnter);
+        }
+
+        this.setState({ el }, () => {
+          console.log('QWEQWEQWE');
+          JsSpatialNavigation.focus(config.defaultElement);
+        });
     }
 
   _componentFocused = (event) => this.componentFocused(event);
   _componentUnfocused = (event) => this.componentUnfocused(event);
   _componentClickEnter = (event) => this.componentClickEnter(event);
-
-  componentDidMount() {
-    if (!this.state.el)
-      return;
-
-    this.state.el.addEventListener("sn:focused", this._componentFocused);
-    this.state.el.addEventListener("sn:unfocused", this._componentUnfocused);
-    this.state.el.addEventListener("sn:enter-up", this._componentClickEnter);
-  }
 
   componentWillUnmount() {
       if (!this.state.el)
@@ -189,18 +193,12 @@ class Focusable extends Component {
 
     this.state.el.removeEventListener("sn:focused", this._componentFocused);
     this.state.el.removeEventListener("sn:unfocused", this._componentUnfocused);
-    this.state.el.removeEventListener("sn:enter-up", this._componentClickEnter);
+    this.state.el.removeEventListener("sn:enter-down", this._componentClickEnter);
   }
 
   render() {
-    let classNames = [this.context.focusableSectionId ? this.context.focusableSectionId : config.focusableClassName];
-
-    if (this.props.active) {
-      classNames.push(config.activeClassName);
-    }
-
-    if (this.props.className) {
-      classNames.push(this.props.className);
+    if (this.props.active && this.state.el) {
+        this.state.el.focus();
     }
 
     return (
