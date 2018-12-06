@@ -180,7 +180,7 @@ class Focusable extends Component {
 
     this.state.el.addEventListener("sn:focused", this._componentFocused);
     this.state.el.addEventListener("sn:unfocused", this._componentUnfocused);
-    this.state.el.addEvestate.ntListener("sn:enter-up", this._componentClickEnter);
+    this.state.el.addEventListener("sn:enter-up", this._componentClickEnter);
   }
 
   componentWillUnmount() {
