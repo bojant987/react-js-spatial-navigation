@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37abe742-97bf-4e22-a929-9579ed3368d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/build/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="37abe742-97bf-4e22-a929-9579ed3368d7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/build/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,6 +16,7 @@
     <session id="1841836734">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -49,7 +47,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
@@ -70,7 +68,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/lib/spatial_navigation.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
@@ -99,9 +97,9 @@
       <find>focus(</find>
       <find>enter-up</find>
       <find>focusnext</find>
-      <find>componentClickEnter</find>
       <find>navigate</find>
       <find>getRect</find>
+      <find>componentClickEnter</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/src</dir>
@@ -134,8 +132,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1727" />
-    <option name="y" value="27" />
+    <option name="x" value="1920" />
+    <option name="y" value="30" />
     <option name="width" value="1680" />
     <option name="height" value="947" />
   </component>
@@ -203,15 +201,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544090435315</updated>
-      <workItem from="1544090436564" duration="10814000" />
+      <workItem from="1544090436564" duration="11704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10814000" />
+    <option name="totallyTimeSpent" value="11704000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1727" y="27" width="1680" height="947" extended-state="0" />
+    <frame x="1979" y="30" width="1680" height="947" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="npm" side_tool="true" />
@@ -241,16 +239,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/lib/spatial_navigation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="761" column="67" lean-forward="true" selection-start-line="761" selection-start-column="67" selection-end-line="761" selection-end-column="67" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -264,6 +252,16 @@
           <caret line="164" column="26" lean-forward="true" selection-start-line="164" selection-start-column="26" selection-end-line="164" selection-end-column="26" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lib/spatial_navigation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="761" column="67" lean-forward="true" selection-start-line="761" selection-start-column="67" selection-end-line="761" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>

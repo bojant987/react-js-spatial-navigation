@@ -178,7 +178,6 @@ class Focusable extends Component {
         }
 
         this.setState({ el }, () => {
-          console.log('QWEQWEQWE');
           JsSpatialNavigation.focus(config.defaultElement);
         });
     }
